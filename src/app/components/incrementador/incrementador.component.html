@@ -1,0 +1,20 @@
+<div class="input-group">
+  <span class="input-group-btn">
+    <button [ngClass]="btnClass" type="button" (click)="cambiarValor(-5)">
+      <i class="fa fa-minus"></i>
+    </button>
+  </span>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="valor"
+    [ngClass]="{'is-invalid': valor > 100 || valor < 0 }"
+    (ngModelChange)="onChange($event)"
+    [(ngModel)]="valor"
+  />
+  <span class="input-group-btn">
+    <button [ngClass]="btnClass" type="button" (click)="cambiarValor(10)">
+      <i class="fa fa-plus"></i>
+    </button>
+  </span>
+</div>

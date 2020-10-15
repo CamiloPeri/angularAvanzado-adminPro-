@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pages.component.css']
 })
 export class PagesComponent implements OnInit {
-
+  public linkTheme = document.querySelector('#theme');
   constructor() { }
 
   ngOnInit(): void {
+    let url = localStorage.getItem('tema') || './assets/css/colors/purple-dark.css'
+
+    this.linkTheme.setAttribute('href', url);
+
+
   }
+
 
 }

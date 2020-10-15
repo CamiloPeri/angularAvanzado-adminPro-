@@ -7,9 +7,10 @@ import { AuthModule } from './auth/auth.module';
 import { AppComponent } from './app.component';
 
 import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent, NopagesfoundComponent],
-  imports: [BrowserModule, AppRoutingModule, PagesModule, AuthModule],
+  imports: [ FormsModule,BrowserModule, AppRoutingModule, PagesModule, AuthModule],
 
   providers: [],
   bootstrap: [AppComponent],
